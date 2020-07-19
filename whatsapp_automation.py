@@ -1,13 +1,13 @@
-from IPython import get_ipython
-
-get_ipython().system('pip install Selenium')
-get_ipython().system('pip install webdriver-manager --user')
+from os import system
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+
+system('pip install Selenium -q -q -q')
+system('pip install webdriver-manager --user -q -q -q')
 
 contact = input("\n\nEnter a saved contact name to send a message to:\n")
 text = input("\n\nWhat's the message ?\n")
